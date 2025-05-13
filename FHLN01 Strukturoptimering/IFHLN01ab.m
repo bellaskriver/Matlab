@@ -26,10 +26,11 @@ xforce_left = 2 * le;
 
 %Skapa filtermatris
 M = filterDesignVariable(r_min_compli, coord, enod, nelm);
+size(M)
 
 %Inparametrar MMA optimering
 m = 1; %m=1 volymsvillkor, m=2 volymsvillkor + spänningsvillkor
-maxIter = 150; %Antal iterationer
+maxIter = 50; %Antal iterationer
 xmin = zeros(nelm, 1);
 xmax = ones(nelm, 1);
 xold1 = xval;
